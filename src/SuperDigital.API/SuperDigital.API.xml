@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SuperDigital.API</name>
+    </assembly>
+    <members>
+        <member name="M:SuperDigital.API.Controllers.ContaCorrenteController.GetAsync(System.Int32)">
+            <summary>
+            Obtém uma conta corrente com seus lançamentos.
+            </summary>
+            <param name="id">Número da Conta Corrente</param>
+            <returns></returns>
+        </member>
+        <member name="M:SuperDigital.API.Controllers.ContaCorrenteController.PostAsync(SuperDigital.API.Contracts.RealizarTransferenciaRequest)">
+            <summary>
+            Realiza uma transferência entre duas contas correntes.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
