@@ -12,23 +12,25 @@ Por exemplo, em uma solução de e-commerce poderiamos ter dois microservices: "
 
 * Ganhos:
 
-Isolamento de Falhas: As funcionalidades de uma solução ficam mais desacopladas, o que minimiza o impacto negativo entre elas. Por exemplo: caso um microservice fique indisponível os outros não serão afetados diretamente, o que normalmente ocorre em uma aplicação monolítica.
+1. Isolamento de Falhas: As funcionalidades de uma solução ficam mais desacopladas, o que minimiza o impacto negativo entre elas. Por exemplo: caso um microservice fique indisponível os outros não serão afetados diretamente, o que normalmente ocorre em uma aplicação monolítica.
 
-Deploys mais rápidos: Os microservices alterados ou criados podem ser publicados no ambiente (DEV/UAT/PRD/etc.) de forma independente, ou seja, não é necessário fazer deploy de toda a solução.
+2. Deploys mais rápidos: Os microservices alterados ou criados podem ser publicados no ambiente (DEV/UAT/PRD/etc.) de forma independente, ou seja, não é necessário fazer deploy de toda a solução.
 
-Soluções mais escaláveis: Em um momento de workload, por exemplo uma black friday, não é preciso fazer o scaling de toda aplicação, somente dos microservices mais utilizados.
+3. Soluções mais escaláveis: Em um momento de workload, por exemplo uma black friday, não é preciso fazer o scaling de toda aplicação, somente dos microservices mais utilizados.
+
+4. Soluções mais heterogeneas: É possível aplicar a tecnologia que mais se aproxima a cada resolução de um problema do microservice.
 
 * Desafios:
 
-Monitoramento: Dependendo da solução, podemos ter dezenas, centenas e até mesmo milhares de microservices. O monitoramento passa a ser um item fundamental na gestão de microservices.
+1. Monitoramento: Dependendo da solução, podemos ter dezenas, centenas e até mesmo milhares de microservices. O monitoramento passa a ser um item fundamental na gestão de microservices.
 
-Modelagem: O tamanho de um microservice pode variar muito, o que pode gerar muitos microservices. Por isso é importante se atentar ao scopo da solução.
+2. Modelagem: O tamanho de um microservice pode variar muito, o que pode gerar muitos microservices. Por isso é importante se atentar ao scopo da solução.
 
-Comunicação entre serviços: Dependeno da solução, cada milisegundo é necessário. Logo, é importante se preocupar com a latência na comunicação entre os microservices.
+3. Comunicação entre serviços: Dependeno da solução, cada milisegundo é necessário. Logo, é importante se preocupar com a latência na comunicação entre os microservices.
 
-Fault Tolerance: É importante ter em mente, que em uma arquitetura de microservies pode ocorrer falhas. É importante pensar em utilizar ferramentas que fazerm políticas de retry, circuit breakers, osquestradores de microservices (Kubernets) e services mesh (Istio).
+4. Fault Tolerance: É importante ter em mente, que em uma arquitetura de microservies pode ocorrer falhas. É importante pensar em utilizar ferramentas que fazerm políticas de retry, circuit breakers, osquestradores de microservices (Kubernets) e services mesh (Istio).
 
-Consistência de Dados: Como cada microservice pode ter a sua base de dados, é importante garantir que elas estejam sincronizadas. Por exemplo um microservice "Carrinho de Compras" e "Estoque" podem utilizar o mesmo ID de produto. Se houver uma inconsistência entre eles, a compra em um e-commerce pode não ser realizada.
+5. Consistência de Dados: Como cada microservice pode ter a sua base de dados, é importante garantir que elas estejam sincronizadas. Por exemplo um microservice "Carrinho de Compras" e "Estoque" podem utilizar o mesmo ID de produto. Se houver uma inconsistência entre eles, a compra em um e-commerce pode não ser realizada.
 
 
 ## 3. Comunicação Sincrona vs Assincrona
